@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  40.输入整数数组 arr ，找出其中最小的 k 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
+
+        //  
+        // 示例 1：
+
+        // 输入：arr = [3,2,1], k = 2
+        // 输出：[1,2] 或者 [2,1]
+        // 示例 2：
+
+        // 输入：arr = [0,1,2,1], k = 1
+        // 输出：[0] 
+        // 解答: 
+        var getLeastNumbers = function (arr, k) {
+            let num = arr.sort((a, b) => a - b);
+            console.log(num);
+            let number = []
+            for (let i = 0; i < k; i++) {
+                number.push(num[i])
+            }
+            console.log(number);
+            return number
+        };
+        let num = [2, 1, 5, 3, 6, 9, 8, 4, 7]
+        getLeastNumbers(num, 4)
+
+        //sort 排序
+        //升序 sort((a,b)=>a-b)
+        //降序 sort((a,b)=>b-a)
+    </script>
+</body>
+
+</html>
